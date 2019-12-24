@@ -11,7 +11,7 @@ class DataItem(models.Model):
 
     data       = JSONField()
     containers = models.ManyToManyField(DataContainer)
-    name       = models.CharField(max_length=200)
+    name       = models.CharField(max_length=200. default='Item')
 
     def __str__(self):
-        return self.name
+        return f'{self.name}: {self.id}'

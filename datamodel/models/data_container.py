@@ -10,3 +10,6 @@ class DataContainer(models.Model):
 
     name  = models.CharField(max_length=200)
     items = models.ManyToManyField(DataItem)
+
+    def __str__(self):
+        return self.name
